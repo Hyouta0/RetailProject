@@ -1,0 +1,6 @@
+#ignore .csv files
+*.csv
+#donot ignore
+!product.csv
+#ignore .idea/
+.idea/
