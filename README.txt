@@ -1,5 +1,5 @@
-#Retail Project 
+# Retail Project 
 
-##Data Analysis
+## Data Analysis
 
 This is a retail project build using python, sql on data analysis domain 
