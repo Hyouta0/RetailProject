@@ -6,3 +6,6 @@
 #ignore .idea/
 .idea/
 
+#ignore .sh
+*.sh
+
