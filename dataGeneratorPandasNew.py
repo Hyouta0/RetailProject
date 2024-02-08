@@ -56,6 +56,7 @@ while(startDate<=endDate):
 
 #create new dataFrame
 transHeader = pd.DataFrame(transHeaderList,columns=["trans_id","member_id","store_id","trans_date"])
+transHeader=transHeader.drop_duplicates()
 transDetail = pd.DataFrame(transDetailList,columns=["trans_id","product_id","qty","amount","trans_date"])
 
 #writing to csv
