@@ -16,6 +16,7 @@ transDetail = pd.read_csv(transDetailPath)
 #Retail
 #retail = transHeader.join(transDetail ,on='trans_id',how='inner')
 retail = transHeader.merge(transDetail,on='trans_id',how='inner')
-newRetail = retail.groupby(['member_id'])['amount'].sum()
+newRetail = pd.DataFrame(retail.groupby(['member_id'])['amount'].sum())
+newRetail=newRetail.sort_values('amount')
 print(newRetail)
 #print(retail)
