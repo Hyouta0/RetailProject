@@ -1,4 +1,6 @@
 import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib.ticker import PercentFormatter
 from datetime import date as Date
 
 #path
@@ -16,7 +18,11 @@ transDetail = pd.read_csv(transDetailPath)
 #Retail
 #retail = transHeader.join(transDetail ,on='trans_id',how='inner')
 retail = transHeader.merge(transDetail,on='trans_id',how='inner')
-newRetail = pd.DataFrame(retail.groupby(['member_id'])['amount'].sum())
-newRetail=newRetail.sort_values('amount')
-print(newRetail)
-#print(retail)
+#retail['total']=retail.groupby(['member_id'])['amount'].transform('sum')
+newRetail = retail.groupby(['member_id'])['amount'].sum()
+newRetail=newRetail.sort_values(ascending=False)
+#print(newRetail.amount)
+
+#matplotlib
+newRetail.plot(x="member_id",y="amount",kind="bar")
+plt.show()
