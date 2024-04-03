@@ -6,12 +6,10 @@
 #ignore .idea/
 .idea/
 
-#ignore .sh
-*.sh
 #ignore data folder
 Data/
 #ignore pycahe
-__Pycache__
+__Pycache__/
 # ignore lock files
 *.lock
 #ignore .venv folder
