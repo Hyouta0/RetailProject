@@ -1,0 +1,19 @@
+#ignore .csv files
+*.csv
+#donot ignore
+!product.csv
+!member_data.csv
+#ignore .idea/
+.idea/
+
+#ignore .sh
+*.sh
+#ignore data folder
+Data/
+#ignore pycahe
+__Pycache__
+# ignore lock files
+*.lock
+#ignore .venv folder
+.venv/
+
